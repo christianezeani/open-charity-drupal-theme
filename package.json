@@ -6,9 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp start",
-    "build": "gulp build",
-    "publish": "composer update && gulp build"
+    "start": "gulp watch",
+    "build": "gulp build"
   },
   "license": "MIT",
   "devDependencies": {
@@ -17,9 +16,7 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-copy": "^1.1.0",
     "gulp-header": "^1.8.9",
-    "gulp-hub": "frankwallis/gulp-hub#registry-init",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
