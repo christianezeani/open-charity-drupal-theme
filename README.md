@@ -1,0 +1,1 @@
+# open-charity-drupal-theme
