@@ -1,0 +1,8 @@
+name = OpenCharity Drupal Theme by Christian Ezeani
+description = A multi-column theme which can be configured to modify colors and switch between fixed and fluid width layouts.
+package = Core
+version = 1.0
+core = 7.x
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+settings[garland_width] = fluid
