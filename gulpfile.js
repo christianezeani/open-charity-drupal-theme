@@ -5,7 +5,6 @@ const minify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const header = require('gulp-header');
 const sass = require('gulp-sass');
-const copy = require('gulp-copy');
 const zip = require('gulp-zip');
 
 
@@ -29,17 +28,17 @@ gulp.task('build-css', () => {
     .pipe(gulp.dest(`${THEME_DIR}/css`));
 });
 
-const buildSeries = gulp.series('build-css');
-
-gulp.task('watch-all', () => {
-  gulp.watch(SRC_SCSS_ENTRY, buildSeries);
-});
-
 gulp.task('zip-all', () => {
   return gulp.src(`${THEME_DIR}/**/*`)
     .pipe(zip('ce_opencharity.zip'))
     .pipe(gulp.dest(BUILD_DIR));
 });
 
-gulp.task('watch', gulp.series(buildSeries, 'watch-all'));
+const buildSeries = gulp.series('build-css');
+
+gulp.task('watch', () => {
+  gulp.watch(SRC_SCSS_ENTRY, buildSeries);
+});
+
+gulp.task('start', gulp.series(buildSeries, 'watch'));
 gulp.task('build', gulp.series(buildSeries, 'zip-all'));
