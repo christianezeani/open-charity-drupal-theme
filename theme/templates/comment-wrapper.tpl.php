@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Implementation to provide an HTML container for comments.

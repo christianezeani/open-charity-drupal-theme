@@ -5,4 +5,4 @@ version = 1.0
 core = 7.x
 stylesheets[all][] = style.css
 stylesheets[print][] = print.css
-settings[garland_width] = fluid
+

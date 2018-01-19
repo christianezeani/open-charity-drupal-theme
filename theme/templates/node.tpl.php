@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Implementation to display a node.

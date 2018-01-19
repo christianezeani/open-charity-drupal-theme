@@ -10,17 +10,19 @@
     "build": "gulp build",
     "publish": "composer update && gulp build"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.1.0",
     "gulp-header": "^1.8.9",
     "gulp-hub": "frankwallis/gulp-hub#registry-init",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.1.0"
   }
 }

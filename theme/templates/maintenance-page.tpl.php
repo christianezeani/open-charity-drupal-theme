@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Implementation to display a single Drupal page while offline.
@@ -10,5 +9,4 @@
  * @see template_preprocess_maintenance_page()
  * @see bartik_process_maintenance_page()
  */
-
 ?>
