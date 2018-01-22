@@ -1,0 +1,22 @@
+
+@function oc-color($type: default) {
+  $color: map-get($colors, default);
+  @if (map-has-key($colors, $type)) {
+    $color: map-get($colors, $type);
+  }
+  @return $color;
+}
+
+@function oc-bg-color($type: default) {
+  $color: map-get($background-colors, default);
+  @if (map-has-key($background-colors, $type)) {
+    $color: map-get($background-colors, $type);
+  }
+  @return $color;
+}
+
+@function oc-divide($number, $by: 1) {
+  $number: max($number, 1);
+  $by: max($by, 1);
+  @return ($number / $by);
+}

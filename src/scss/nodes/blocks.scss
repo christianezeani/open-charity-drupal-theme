@@ -1,0 +1,137 @@
+.oc-home-event {
+  padding: 30px 0px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+
+  h3 {
+    margin: 5px 0px 10px 0px;
+  }
+
+  p {
+    margin: 5px 0px;
+  }
+
+  .oc-right {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 0px;
+  }
+
+  @media (min-width: 700px) {
+    & {
+      text-align: left;
+    }
+
+    .oc-left {
+      float: left;
+    }
+
+    .oc-right {
+      margin-top: 0px;
+      float: right;
+    }
+  }
+}
+
+
+
+.oc-home-get-involved {
+  background-color: oc-bg-color();
+  padding: 30px 0px;
+  text-align: center;
+
+  h3 {
+    text-transform: uppercase;
+    margin: 10px 0px;
+  }
+
+  img {
+    height: 100px;
+  }
+
+  .oc-column {
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 800px) {
+    .oc-column {
+      float: left;
+      width: oc-divide(100%, 3);
+      margin: 0px;
+    }
+  }
+}
+
+
+
+.oc-home-mission {
+  padding: 30px 0px;
+  text-align: center;
+  overflow-x: hidden;
+
+  .oc-row {
+    margin: 0px -15px;
+
+    > .oc-column {
+      position: relative;
+      padding-top: 100px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .oc-row {
+      > .oc-column {
+        float: left;
+        width: oc-divide(100%, 3);
+      }
+    }
+  }
+
+  .oc-column-item {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 0.9rem;
+
+    .oc-icon {
+      margin: -65px auto 10px auto;
+      width: 100px;
+      height: 100px;
+      border: 10px solid #FFF;
+      border-radius: 50%;
+      overflow: hidden;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      color: oc-color(primary);
+    }
+  }
+
+}
+
+
+
+.oc-home-members {
+  padding: 30px 0px;
+  text-align: center;
+  border-top: 1px solid #D9DADD;
+}
+
+
+
+.oc-home-blog {
+  background-color: oc-bg-color();
+  padding: 30px 0px;
+}

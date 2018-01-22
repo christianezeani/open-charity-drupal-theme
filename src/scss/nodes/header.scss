@@ -1,0 +1,35 @@
+
+.oc-header {
+  text-align: center;
+  background-color: #FFF;
+  font-size: 0.95rem;
+  padding: 20px 0px;
+
+  .oc-logo {
+    padding: 10px 0px;
+    img {
+      height: 25px;
+      vertical-align: middle;
+    }
+  }
+
+  .oc-toolbar {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  @media (min-width: 500px) {
+    & {
+      text-align: left;
+    }
+
+    .oc-logo {
+      float: left;
+    }
+
+    .oc-toolbar {
+      float: right;
+    }
+  }
+
+}
