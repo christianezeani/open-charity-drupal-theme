@@ -5,11 +5,6 @@ function oc_theme_path() {
 }
 
 
-
-function opencharity_process_html(&$variables) {
-  // 
-}
-
 function opencharity_preprocess_page(&$variables) {
   $variables['image_path'] = $image_path = oc_theme_path().'/assets/images';
   $variables['logo'] = $image_path.'/oc-logo.png';
