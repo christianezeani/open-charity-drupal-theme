@@ -3,30 +3,30 @@
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
-
+  
   h3 {
     margin: 5px 0px 10px 0px;
   }
-
+  
   p {
     margin: 5px 0px;
   }
-
+  
   .oc-right {
     margin-top: 10px;
     font-size: 0.9rem;
     padding: 5px 0px;
   }
-
+  
   @media (min-width: 700px) {
     & {
       text-align: left;
     }
-
+    
     .oc-left {
       float: left;
     }
-
+    
     .oc-right {
       margin-top: 0px;
       float: right;
@@ -40,29 +40,16 @@
   background-color: oc-bg-color();
   padding: 30px 0px;
   text-align: center;
-
+  
   h3 {
     text-transform: uppercase;
     margin: 10px 0px;
   }
-
+  
   img {
     height: 100px;
   }
-
-  .oc-column {
-    padding: 5px 10px;
-    margin: 10px 0px;
-    font-size: 0.9rem;
-  }
-
-  @media (min-width: 800px) {
-    .oc-column {
-      float: left;
-      width: oc-divide(100%, 3);
-      margin: 0px;
-    }
-  }
+  
 }
 
 
@@ -71,33 +58,19 @@
   padding: 30px 0px;
   text-align: center;
   overflow-x: hidden;
-
+  
   .oc-row {
-    margin: 0px -15px;
-
-    > .oc-column {
-      position: relative;
+    > .oc-col {
       padding-top: 100px;
-      padding-left: 15px;
-      padding-right: 15px;
     }
   }
-
-  @media (min-width: 800px) {
-    .oc-row {
-      > .oc-column {
-        float: left;
-        width: oc-divide(100%, 3);
-      }
-    }
-  }
-
+  
   .oc-column-item {
     background-color: #FFF;
     border-radius: 10px;
     padding: 15px;
     font-size: 0.9rem;
-
+    
     .oc-icon {
       margin: -65px auto 10px auto;
       width: 100px;
@@ -105,20 +78,20 @@
       border: 10px solid #FFF;
       border-radius: 50%;
       overflow: hidden;
-
+      
       > img {
         width: 100%;
         height: 100%;
       }
     }
-
+    
     h3 {
       margin-top: 0px;
       margin-bottom: 10px;
       color: oc-color(primary);
     }
   }
-
+  
 }
 
 
@@ -127,11 +100,99 @@
   padding: 30px 0px;
   text-align: center;
   border-top: 1px solid #D9DADD;
+  
+  img {
+    width: auto;
+    max-width: 60%;
+    height: auto;
+    max-height: 60px;
+  }
+  
+  .oc-col {
+    text-align: center;
+    
+    &:nth-child(3) {
+      img {
+        max-height: 30px;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .oc-col {
+      width: 20%;
+    }
+  }
+  
+  .oc-nav-wrapper {
+    text-align: center;
+    margin-top: 40px;
+    
+    .oc-nav-item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: oc-bg-color(dark);
+      display: inline-block;
+      margin: 0px 3px;
+      cursor: pointer;
+      
+      &.active {
+        background-color: oc-bg-color(primary);
+      }
+    }
+  }
+  
 }
 
 
 
 .oc-home-blog {
+  font-family: 'Museo Sans', Tahoma, sans-serif;
   background-color: oc-bg-color();
   padding: 30px 0px;
+  
+  .oc-table {
+    width: 100%;
+    
+    > .oc-col {
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+      
+      &:first-child, &:last-child {
+        width: 35px;
+        color: oc-color(primary);
+        font-size: 2.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .oc-col {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 5px 0px;
+    border-bottom: 1px solid #F4F5F7;
+    color: oc-color(primary);
+  }
+  
+  p {
+    padding: 5px 0px;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+  
+  .oc-date {
+    border-top: 1px solid #F4F5F7;
+  }
+  
 }

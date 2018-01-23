@@ -12,10 +12,28 @@
   <header class="oc-header">
     <div class="oc-container oc-clearfix">
       <div class="oc-logo">
-        <a href="/"><img src="<?php echo $logo; ?>" alt="<?php echo t('OpenCharity') ?>"></a>
+        <a href="<?php echo base_path(); ?>">
+          <img src="<?php echo $logo; ?>" alt="<?php echo t('OpenCharity') ?>">
+        </a>
       </div>
 
       <div class="oc-toolbar">
+        <?php
+        if ($main_menu) {
+          print theme('links__system_main_menu', array(
+            'links' => $main_menu,
+            'attributes' => array(
+              'class' => array('oc-menu'),
+            ),
+            'heading' => array(
+              'text' => t('Main Menu'),
+              'level' => 'h2',
+              'class' => array('element-invisible'),
+            ),
+          ));
+        }
+        ?>
+
         <a href="" class="oc-button">Join Us</a>
       </div>
     </div>
@@ -27,6 +45,10 @@
     <?php if (!$is_front) { ?>
 
       <!-- BEGIN: CONTENTS OF OTHER PAGES -->
+      <section class="oc-banner-2">
+        <!--  -->
+      </section>
+
       <div class="oc-container">
         <?php echo render($page['content']); ?>
       </div>
@@ -55,22 +77,22 @@
         <div class="oc-container oc-clearfix">
           <h2 class="block-title">Get Involved</h2>
 
-          <div class="oc-clearfix">
-            <div class="oc-column">
+          <div class="oc-row">
+            <div class="oc-col sm-4">
               <p><img src="<?php echo $image_path; ?>/meetup.png" alt=""></p>
               <h3>We do Meetings</h3>
               <p>We organise our meetings through the OpenCharity MeetUp group</p>
               <p><a href="" class="oc-button">MeetUp group</a></p>
             </div>
 
-            <div class="oc-column">
+            <div class="oc-col sm-4">
               <p><img src="<?php echo $image_path; ?>/slack.png" alt=""></p>
               <h3>We Communicate</h3>
               <p>OpenCharity have a Slack group for daily communication</p>
               <p><a href="" class="oc-button">Slack group</a></p>
             </div>
 
-            <div class="oc-column">
+            <div class="oc-col sm-4">
               <p><img src="<?php echo $image_path; ?>/share.png" alt=""></p>
               <h3>We Collaborate</h3>
               <p>We have a Wiki group set up to share tools and documents</p>
@@ -85,9 +107,9 @@
           <section class="oc-home-mission">
             <h2 class="block-title">Our Mission</h2>
             <p>Charities and Partners collaborating and sharing open solutions and ideas to create value in the digital space</p>
-            <p class="oc-bold">If you are a charity or a supplier, we are ready to welcome you</p>
-            <div class="oc-row oc-clearfix">
-              <div class="oc-column">
+            <p class="oc-bold">If you are a charity or a supplier, we are ready to welcome you.</p>
+            <div class="oc-row">
+              <div class="oc-col sm-4">
                 <div class="oc-column-item">
                   <div class="oc-icon">
                     <img src="<?php echo $image_path; ?>/bulb-alt.png" alt="">
@@ -96,7 +118,7 @@
                   <p>share knowledge and working practice to make the best technology choices</p>
                 </div>
               </div>
-              <div class="oc-column">
+              <div class="oc-col sm-4">
                 <div class="oc-column-item">
                   <div class="oc-icon">
                     <img src="<?php echo $image_path; ?>/together-alt.png" alt="">
@@ -105,7 +127,7 @@
                   <p>charities and suppliers to the charity sector to share best practices</p>
                 </div>
               </div>
-              <div class="oc-column">
+              <div class="oc-col sm-4">
                 <div class="oc-column-item">
                   <div class="oc-icon">
                     <img src="<?php echo $image_path; ?>/encourage-alt.png" alt="">
@@ -119,6 +141,20 @@
 
           <section class="oc-home-members">
             <h2 class="block-title">Our Members</h2>
+
+            <div class="oc-table sm">
+              <div class="oc-col"><img src="<?php echo $image_path.'/cancer-research.png'; ?>" alt=""></div>
+              <div class="oc-col"><img src="<?php echo $image_path.'/compucorp.png'; ?>" alt=""></div>
+              <div class="oc-col"><img src="<?php echo $image_path.'/kop.png'; ?>" alt=""></div>
+              <div class="oc-col"><img src="<?php echo $image_path.'/zing.png'; ?>" alt=""></div>
+              <div class="oc-col"><img src="<?php echo $image_path.'/comic-relief.png'; ?>" alt=""></div>
+            </div>
+
+            <div class="oc-nav-wrapper">
+              <span class="oc-nav-item active"></span>
+              <span class="oc-nav-item"></span>
+              <span class="oc-nav-item"></span>
+            </div>
           </section>
         </section>
       </section>
@@ -126,6 +162,42 @@
       <section class="oc-home-blog">
         <section class="oc-container">
           <h2 class="block-title">Blog</h2>
+
+          <div class="oc-table xs">
+            <div class="oc-col">
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="oc-col">
+                
+              <div class="oc-row">
+                <div class="oc-col md-3 sm-6">
+                  <h3>Online Donations Special...</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                  <p class="oc-date">14 Nov 2014</p>
+                </div>
+                <div class="oc-col md-3 sm-6">
+                  <h3>Online Donations Special...</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                  <p class="oc-date">14 Nov 2014</p>
+                </div>
+                <div class="oc-col md-3 sm-6">
+                  <h3>Online Donations Special...</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                  <p class="oc-date">14 Nov 2014</p>
+                </div>
+                <div class="oc-col md-3 sm-6">
+                  <h3>Online Donations Special...</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                  <p class="oc-date">14 Nov 2014</p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="oc-col">
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+
         </section>
       </section>
       <!-- END: CONTENTS OF HOMEPAGE -->

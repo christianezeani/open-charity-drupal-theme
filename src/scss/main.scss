@@ -11,6 +11,217 @@ html, body {
   }
 }
 
+.oc-row {
+  margin-left: -$grid-spacing;
+  margin-right: -$grid-spacing;
+  
+  &:before, &:after {
+    display: block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    clear: both;
+  }
+  
+  .oc-col {
+    position: relative;
+    padding-left: $grid-spacing;
+    padding-right: $grid-spacing;
+    
+    &.xs-1, &.xs-2, &.xs-3, &.xs-4, &.xs-5, &.xs-6,
+    &.xs-7, &.xs-8, &.xs-9, &.xs-10, &.xs-11, &.xs-12 {
+      float: left;
+    }
+    
+    &.xs-1 { width: oc-col-width(1); }
+    &.xs-2 { width: oc-col-width(2); }
+    &.xs-3 { width: oc-col-width(3); }
+    &.xs-4 { width: oc-col-width(4); }
+    &.xs-5 { width: oc-col-width(5); }
+    &.xs-6 { width: oc-col-width(6); }
+    &.xs-7 { width: oc-col-width(7); }
+    &.xs-8 { width: oc-col-width(8); }
+    &.xs-9 { width: oc-col-width(9); }
+    &.xs-10 { width: oc-col-width(10); }
+    &.xs-11 { width: oc-col-width(11); }
+    &.xs-12 { width: oc-col-width(12); }
+    
+    @media (min-width: 768px) {
+      &.sm-1, &.sm-2, &.sm-3, &.sm-4, &.sm-5, &.sm-6,
+      &.sm-7, &.sm-8, &.sm-9, &.sm-10, &.sm-11, &.sm-12 {
+        float: left;
+      }
+      
+      &.sm-1 { width: oc-col-width(1); }
+      &.sm-2 { width: oc-col-width(2); }
+      &.sm-3 { width: oc-col-width(3); }
+      &.sm-4 { width: oc-col-width(4); }
+      &.sm-5 { width: oc-col-width(5); }
+      &.sm-6 { width: oc-col-width(6); }
+      &.sm-7 { width: oc-col-width(7); }
+      &.sm-8 { width: oc-col-width(8); }
+      &.sm-9 { width: oc-col-width(9); }
+      &.sm-10 { width: oc-col-width(10); }
+      &.sm-11 { width: oc-col-width(11); }
+      &.sm-12 { width: oc-col-width(12); }
+    }
+    
+    @media (min-width: 992px) {
+      &.md-1, &.md-2, &.md-3, &.md-4, &.md-5, &.md-6,
+      &.md-7, &.md-8, &.md-9, &.md-10, &.md-11, &.md-12 {
+        float: left;
+      }
+      
+      &.md-1 { width: oc-col-width(1); }
+      &.md-2 { width: oc-col-width(2); }
+      &.md-3 { width: oc-col-width(3); }
+      &.md-4 { width: oc-col-width(4); }
+      &.md-5 { width: oc-col-width(5); }
+      &.md-6 { width: oc-col-width(6); }
+      &.md-7 { width: oc-col-width(7); }
+      &.md-8 { width: oc-col-width(8); }
+      &.md-9 { width: oc-col-width(9); }
+      &.md-10 { width: oc-col-width(10); }
+      &.md-11 { width: oc-col-width(11); }
+      &.md-12 { width: oc-col-width(12); }
+    }
+    
+    @media (min-width: 1200px) {
+      &.lg-1, &.lg-2, &.lg-3, &.lg-4, &.lg-5, &.lg-6,
+      &.lg-7, &.lg-8, &.lg-9, &.lg-10, &.lg-11, &.lg-12 {
+        float: left;
+      }
+      
+      &.lg-1 { width: oc-col-width(1); }
+      &.lg-2 { width: oc-col-width(2); }
+      &.lg-3 { width: oc-col-width(3); }
+      &.lg-4 { width: oc-col-width(4); }
+      &.lg-5 { width: oc-col-width(5); }
+      &.lg-6 { width: oc-col-width(6); }
+      &.lg-7 { width: oc-col-width(7); }
+      &.lg-8 { width: oc-col-width(8); }
+      &.lg-9 { width: oc-col-width(9); }
+      &.lg-10 { width: oc-col-width(10); }
+      &.lg-11 { width: oc-col-width(11); }
+      &.lg-12 { width: oc-col-width(12); }
+    }
+    
+  }
+}
+
+
+.oc-table {
+  width: 100%;
+  
+  > .oc-row > .oc-col, > .oc-col {
+    vertical-align: middle;
+  }
+  
+  &.v-top {
+    > .oc-row > .oc-col, > .oc-col {
+      vertical-align: top;
+    }
+  }
+  
+  &.v-bottom {
+    > .oc-row > .oc-col, > .oc-col {
+      vertical-align: bottom;
+    }
+  }
+  
+  &.xs {
+    display: table;
+    
+    > .oc-row > .oc-col, > .oc-col {
+      display: table-cell;
+      
+      &.col-1 { width: oc-col-width(1); }
+      &.col-2 { width: oc-col-width(2); }
+      &.col-3 { width: oc-col-width(3); }
+      &.col-4 { width: oc-col-width(4); }
+      &.col-5 { width: oc-col-width(5); }
+      &.col-6 { width: oc-col-width(6); }
+      &.col-7 { width: oc-col-width(7); }
+      &.col-8 { width: oc-col-width(8); }
+      &.col-9 { width: oc-col-width(9); }
+      &.col-10 { width: oc-col-width(10); }
+      &.col-11 { width: oc-col-width(11); }
+      &.col-12 { width: oc-col-width(12); }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    &.sm {
+      display: table;
+      
+      > .oc-row > .oc-col, > .oc-col {
+        display: table-cell;
+        
+        &.col-1 { width: oc-col-width(1); }
+        &.col-2 { width: oc-col-width(2); }
+        &.col-3 { width: oc-col-width(3); }
+        &.col-4 { width: oc-col-width(4); }
+        &.col-5 { width: oc-col-width(5); }
+        &.col-6 { width: oc-col-width(6); }
+        &.col-7 { width: oc-col-width(7); }
+        &.col-8 { width: oc-col-width(8); }
+        &.col-9 { width: oc-col-width(9); }
+        &.col-10 { width: oc-col-width(10); }
+        &.col-11 { width: oc-col-width(11); }
+        &.col-12 { width: oc-col-width(12); }
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    &.md {
+      display: table;
+      
+      > .oc-row > .oc-col, > .oc-col {
+        display: table-cell;
+        
+        &.col-1 { width: oc-col-width(1); }
+        &.col-2 { width: oc-col-width(2); }
+        &.col-3 { width: oc-col-width(3); }
+        &.col-4 { width: oc-col-width(4); }
+        &.col-5 { width: oc-col-width(5); }
+        &.col-6 { width: oc-col-width(6); }
+        &.col-7 { width: oc-col-width(7); }
+        &.col-8 { width: oc-col-width(8); }
+        &.col-9 { width: oc-col-width(9); }
+        &.col-10 { width: oc-col-width(10); }
+        &.col-11 { width: oc-col-width(11); }
+        &.col-12 { width: oc-col-width(12); }
+      }
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    &.lg {
+      display: table;
+      
+      > .oc-row > .oc-col, > .oc-col {
+        display: table-cell;
+        
+        &.col-1 { width: oc-col-width(1); }
+        &.col-2 { width: oc-col-width(2); }
+        &.col-3 { width: oc-col-width(3); }
+        &.col-4 { width: oc-col-width(4); }
+        &.col-5 { width: oc-col-width(5); }
+        &.col-6 { width: oc-col-width(6); }
+        &.col-7 { width: oc-col-width(7); }
+        &.col-8 { width: oc-col-width(8); }
+        &.col-9 { width: oc-col-width(9); }
+        &.col-10 { width: oc-col-width(10); }
+        &.col-11 { width: oc-col-width(11); }
+        &.col-12 { width: oc-col-width(12); }
+      }
+    }
+  }
+  
+}
+
+
 .block-title {
   text-transform: uppercase;
   margin: 0px 0px 40px 0px;
@@ -41,7 +252,7 @@ html, body {
 a {
   color: oc-color(primary);
   text-decoration: none;
-
+  
   &:hover {
     color: rgb(123, 228, 231);
   }
@@ -52,7 +263,7 @@ a {
   padding: 10px 25px;
   border: 1px solid oc-color(primary);
   text-transform: uppercase;
-
+  
   &.oc-dark {
     border-color: rgb(70, 177, 180);
     background-color: oc-bg-color(primary);

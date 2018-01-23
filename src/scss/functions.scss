@@ -20,3 +20,8 @@
   $by: max($by, 1);
   @return ($number / $by);
 }
+
+@function oc-col-width($col) {
+  $col: min(max($col, 0), 12);
+  @return (100% / 12 * $col);
+}

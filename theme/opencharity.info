@@ -9,7 +9,7 @@ stylesheets[all][] = assets/css/style.min.css
 
 scripts[] = assets/js/script.min.js
 
-regions[header] = Header
+regions[oc_menu] = Main Menu
 regions[content] = Content
 regions[sidebar_first] = Sidebar Left
 regions[sidebar_second] = Sidebar Left

@@ -2,9 +2,9 @@
 .oc-header {
   text-align: center;
   background-color: #FFF;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   padding: 20px 0px;
-
+  
   .oc-logo {
     padding: 10px 0px;
     img {
@@ -12,24 +12,51 @@
       vertical-align: middle;
     }
   }
-
+  
+  .oc-menu {
+    display: table;
+    margin: 0px auto 20px auto;
+    
+    &, > li {
+      list-style: none;
+    }
+    
+    > li {
+      margin: 0px;
+      display: table-cell;
+      
+      a {
+        display: block;
+        padding: 10px 20px;
+        color: oc-color();
+      }
+    }
+  }
+  
   .oc-toolbar {
     text-transform: uppercase;
     font-weight: bold;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
+    .oc-menu {
+      display: inline-table;
+      margin: 0px 10px 0px 0px;
+    }
+  }
+  
+  @media (min-width: 700px) {
     & {
       text-align: left;
     }
-
+    
     .oc-logo {
       float: left;
     }
-
+    
     .oc-toolbar {
       float: right;
     }
   }
-
+  
 }
