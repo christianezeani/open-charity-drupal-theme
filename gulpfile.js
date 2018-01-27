@@ -20,7 +20,7 @@ const SRC_SCSS_ENTRY = [
   `${SRC_DIR}/scss/functions.scss`,
   `${SRC_DIR}/scss/fonts.scss`,
   `${SRC_DIR}/scss/main.scss`,
-  `${SRC_DIR}/scss/nodes/*.scss`,
+  `${SRC_DIR}/scss/styles/*.scss`,
   `${SRC_DIR}/scss/media/*.scss`
 ];
 

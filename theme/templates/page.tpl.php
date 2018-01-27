@@ -24,16 +24,15 @@
             'links' => $main_menu,
             'attributes' => array(
               'class' => array('oc-menu'),
-            ),
+            )/*,
             'heading' => array(
               'text' => t('Main Menu'),
               'level' => 'h2',
               'class' => array('element-invisible'),
-            ),
+            ),*/
           ));
         }
         ?>
-
         <a href="" class="oc-button">Join Us</a>
       </div>
     </div>
@@ -58,7 +57,14 @@
 
       <!-- BEGIN: CONTENTS OF HOMEPAGE -->
       <section class="oc-banner">
-        <!--  -->
+        <div class="banner-content">
+          <h1>Sharing Ideas for Charity</h1>
+          <div class="banner-text-content">
+            <p>Many charities' goals are similar, as is the functionality we require, but little shared working takes place</p>
+            <p>By working together, driving shared areas of interest and influencing open source development we can bring efficiencies, improve the digital experience for our users, and have great impact.</p>
+            <p>Together we can make a bigger difference.</p>
+          </div>
+        </div>
       </section>
 
       <section class="oc-home-event oc-bg-light">
@@ -171,22 +177,22 @@
                 
               <div class="oc-row">
                 <div class="oc-col md-3 sm-6">
-                  <h3>Online Donations Special...</h3>
+                  <a href="">Online Donations Special...</a>
                   <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                   <p class="oc-date">14 Nov 2014</p>
                 </div>
                 <div class="oc-col md-3 sm-6">
-                  <h3>Online Donations Special...</h3>
+                  <a href="">Online Donations Special...</a>
                   <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                   <p class="oc-date">14 Nov 2014</p>
                 </div>
                 <div class="oc-col md-3 sm-6">
-                  <h3>Online Donations Special...</h3>
+                  <a href="">Online Donations Special...</a>
                   <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                   <p class="oc-date">14 Nov 2014</p>
                 </div>
                 <div class="oc-col md-3 sm-6">
-                  <h3>Online Donations Special...</h3>
+                  <a href="">Online Donations Special...</a>
                   <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                   <p class="oc-date">14 Nov 2014</p>
                 </div>
