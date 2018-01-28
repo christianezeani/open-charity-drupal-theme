@@ -50,7 +50,7 @@ gulp.task('build-css', () => {
 
 gulp.task('zip-all', () => {
   return gulp.src(`${THEME_DIR}/**/*`)
-    .pipe(zip('ce_opencharity.zip'))
+    .pipe(zip('opencharity.zip'))
     .pipe(gulp.dest(BUILD_DIR));
 });
 
