@@ -3,6 +3,7 @@ const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const minify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 // const header = require('gulp-header');
 const sass = require('gulp-sass');
@@ -42,6 +43,7 @@ gulp.task('build-css', () => {
   return gulp.src(SRC_SCSS_ENTRY)
     .pipe(concat('style.css'))
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(CSS_OUTPUT_DEST))
     .pipe(cleanCSS())
     .pipe(rename('style.min.css'))

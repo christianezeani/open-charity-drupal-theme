@@ -15,8 +15,9 @@ html, body {
   font-family: 'Open Sans', Tahoma, sans-serif;
   color: #565659; }
 
-.oc-body *, .oc-body *:before, .oc-body *:after {
-  box-sizing: border-box; }
+.oc-body, .oc-body:before, .oc-body:after, .oc-body *, .oc-body *:before, .oc-body *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .oc-row {
   margin-left: -15px;
