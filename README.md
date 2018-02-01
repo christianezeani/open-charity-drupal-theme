@@ -34,9 +34,9 @@ Once the build process is complete a new zip archive, ready for installation on 
 ## Browser Support
 * IE 9+
 * Firefox (latest)
-* Chrome (lates)
-* Safari (lates)
-* Opera (lates)
+* Chrome (latest)
+* Safari (latest)
+* Opera (latest)
 
 ## Credits
 * [SASS / SCSS](https://sass-lang.com)

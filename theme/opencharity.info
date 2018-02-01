@@ -9,11 +9,10 @@ stylesheets[all][] = assets/css/style.min.css
 
 scripts[] = assets/js/script.min.js
 
-regions[oc_menu] = Main Menu
 regions[content] = Content
 regions[sidebar_first] = Sidebar Left
-regions[sidebar_second] = Sidebar Left
+regions[sidebar_second] = Sidebar Right
 
-regions[footer] = Footer
-regions[footer_first] = Footer First Row
-regions[footer_second] = Footer Second Row
+settings[opencharity_social_facebook] = //www.facebook.com/christian.ezeani.cyb
+settings[opencharity_social_twitter] = //www.twitter.com/ChristianEzeani
+settings[opencharity_social_google] = //www.google.com/ChristianEzeani

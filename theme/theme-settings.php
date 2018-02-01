@@ -1,25 +1,34 @@
 <?php
 
 function opencharity_form_system_theme_settings_alter(&$form, $form_state) {
-  $form['opencharity'] = array(
+  // BEGIN: Social Links
+  $form['opencharity_social'] = array(
     '#type'          => 'fieldset',
-    '#title'         => t('OpenCharity Theme Settings'),
+    '#title'         => t('OpenCharity Social Links'),
     '#weight' => -2
   );
 
-  $form['opencharity']['opencharity_banner'] = array(
-    '#type'          => 'file',
-    '#title'         => t('Banner Image'),
-    '#default_value' => theme_get_setting('opencharity_banner'),
-    '#description'   => t("Changes the banner image on the homepage.")
+  $form['opencharity_social']['opencharity_social_facebook'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Facebook Url'),
+    '#default_value' => theme_get_setting('opencharity_social_facebook'),
+    '#description'   => t("Sets the Facebook Url")
   );
 
-  $form['opencharity']['opencharity_join_us'] = array(
+  $form['opencharity_social']['opencharity_social_twitter'] = array(
     '#type'          => 'textfield',
-    '#title'         => t('Join Us Link'),
-    '#default_value' => theme_get_setting('opencharity_join_us'),
-    '#description'   => t("Sets the \"Join Us\" link on the header")
+    '#title'         => t('Twitter Url'),
+    '#default_value' => theme_get_setting('opencharity_social_twitter'),
+    '#description'   => t("Sets the Twitter Url")
   );
+
+  $form['opencharity_social']['opencharity_social_google'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Google+ Url'),
+    '#default_value' => theme_get_setting('opencharity_social_google'),
+    '#description'   => t("Sets the Google+ Url")
+  );
+  // END: Social Links
 
 }
 

@@ -10,9 +10,30 @@ function opencharity_preprocess_page(&$variables) {
   $variables['logo'] = $image_path.'/oc-logo.png';
 
   // Social Links
-  $variables['facebook_url'] = '//www.facebook.com/christian.ezeani.cyb';
-  $variables['twitter_url'] = '//www.twitter.com/ChristianEzeani';
-  $variables['google_url'] = '//www.google.com/ChristianEzeani';
+  $social = array();
+
+  if ($facebook = theme_get_setting('opencharity_social_facebook')) {
+    $social[] = array(
+      'icon' => 'fa-facebook',
+      'url' => $facebook
+    );
+  }
+
+  if ($twitter = theme_get_setting('opencharity_social_twitter')) {
+    $social[] = array(
+      'icon' => 'fa-twitter',
+      'url' => $twitter
+    );
+  }
+
+  if ($google = theme_get_setting('opencharity_social_google')) {
+    $social[] = array(
+      'icon' => 'fa-google-plus',
+      'url' => $google
+    );
+  }
+
+  $variables['social'] = (count($social)) ? $social : null;
 }
 
 ?>

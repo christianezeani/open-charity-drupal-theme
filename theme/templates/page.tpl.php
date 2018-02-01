@@ -214,19 +214,18 @@
 
   <!-- BEGIN: FOOTER -->
   <footer class="oc-footer">
-    <!-- BEGIN: Social Links -->
-    <div class="oc-container oc-top">
-      <a target="_blank" href="<?php echo $facebook_url; ?>">
-        <i class="fa fa-facebook fa-fw"></i>
-      </a>
-      <a target="_blank" href="<?php echo $twitter_url; ?>">
-        <i class="fa fa-twitter fa-fw"></i>
-      </a>
-      <a target="_blank" href="<?php echo $google_url; ?>">
-        <i class="fa fa-google-plus fa-fw"></i>
-      </a>
-    </div>
-    <!-- END: Social Links -->
+
+    <?php if ($social) { ?>
+      <!-- BEGIN: Social Links -->
+      <div class="oc-container oc-top">
+        <?php foreach($social as $smedia) { ?>
+          <a target="_blank" href="<?php echo $smedia['url']; ?>">
+            <i class="fa fa-fw <?php echo $smedia['icon']; ?>"></i>
+          </a>
+        <?php } ?>
+      </div>
+      <!-- END: Social Links -->
+    <?php } ?>
 
     <!-- Github Link -->
     <div class="oc-container oc-bottom">
