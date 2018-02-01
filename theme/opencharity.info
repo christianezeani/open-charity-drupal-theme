@@ -13,6 +13,6 @@ regions[content] = Content
 regions[sidebar_first] = Sidebar Left
 regions[sidebar_second] = Sidebar Right
 
-settings[opencharity_social_facebook] = //www.facebook.com/christian.ezeani.cyb
-settings[opencharity_social_twitter] = //www.twitter.com/ChristianEzeani
-settings[opencharity_social_google] = //www.google.com/ChristianEzeani
+settings[opencharity_social_facebook] = https://www.facebook.com/christian.ezeani.cyb
+settings[opencharity_social_twitter] = https://www.twitter.com/ChristianEzeani
+settings[opencharity_social_google] = https://www.google.com/ChristianEzeani
