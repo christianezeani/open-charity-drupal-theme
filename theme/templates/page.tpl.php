@@ -33,7 +33,7 @@
           ));
         }
         ?>
-        <a href="" class="oc-button">Join Us</a>
+        <a href="<?php echo $login_url; ?>" class="oc-button">Join Us</a>
       </div>
     </div>
   </header>
@@ -74,7 +74,7 @@
             <p>Cancer Research UK, Angel Building, 407 St John Street, London EC1V 4AD</p>
           </div>
           <div class="oc-right">
-            <a href="" class="oc-button oc-dark">Register</a>
+            <a href="<?php echo $login_url; ?>" class="oc-button oc-dark">Register</a>
           </div>
         </div>
       </section>
